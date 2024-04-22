@@ -1,16 +1,16 @@
-import Menu from "../../containers/Menu";
-import ServiceCard from "../../components/ServiceCard";
 import EventCard from "../../components/EventCard";
 import PeopleCard from "../../components/PeopleCard";
+import ServiceCard from "../../components/ServiceCard";
+import Menu from "../../containers/Menu";
 
-import "./style.scss";
-import EventList from "../../containers/Events";
-import Slider from "../../containers/Slider";
-import Logo from "../../components/Logo";
 import Icon from "../../components/Icon";
+import Logo from "../../components/Logo";
+import EventList from "../../containers/Events";
 import Form from "../../containers/Form";
 import Modal from "../../containers/Modal";
+import Slider from "../../containers/Slider";
 import { useData } from "../../contexts/DataContext";
+import "./style.scss";
 
 const Page = () => {
     const { last } = useData();
@@ -23,7 +23,7 @@ const Page = () => {
                 <section className="SliderContainer">
                     <Slider />
                 </section>
-                <section className="ServicesContainer">
+                <section id="nos-services" className="ServicesContainer">
                     <h2 className="Title">Nos services</h2>
                     <p>
                         Nous organisons des événements sur mesure partout dans
@@ -58,11 +58,11 @@ const Page = () => {
                         </ServiceCard>
                     </div>
                 </section>
-                <section className="EventsContainer">
+                <section id="nos-realisations" className="EventsContainer">
                     <h2 className="Title">Nos réalisations</h2>
                     <EventList />
                 </section>
-                <section className="PeoplesContainer">
+                <section id="notre-equipe" className="PeoplesContainer">
                     <h2 className="Title">Notre équipe</h2>
                     <p>
                         Une équipe d’experts dédiés à l’ogranisation de vos
